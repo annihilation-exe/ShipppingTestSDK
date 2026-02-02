@@ -1,9 +1,3 @@
-//
-//  package.swift
-//  
-//
-//  Created by Sriram Sai Krishna on 02/02/26.
-//
 // swift-tools-version: 5.9
 import PackageDescription
 
