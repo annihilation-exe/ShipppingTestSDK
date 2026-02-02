@@ -1,0 +1,30 @@
+//
+//  package.swift
+//  
+//
+//  Created by Sriram Sai Krishna on 02/02/26.
+//
+// swift-tools-version: 5.9
+import PackageDescription
+
+let package = Package(
+    name: "testSDK",
+    platforms: [
+        .iOS(.v15) // Adjust to your minimum deployment target
+    ],
+    products: [
+        // This is the library name the client sees
+        .library(
+            name: "testSDK",
+            targets: ["testSDK"]
+        ),
+    ],
+    targets: [
+        // The binary target pointing to your hosted zip
+        .binaryTarget(
+            name: "testSDK",
+            url: "https://dl.inmobi.com/inmobi-sdk/IM/InMobi-iOS-SDK-11.1.1.zip", // <--- YOUR HOSTED URL
+            checksum: "578dd32285cc8cea05e04ef3ffd03ccf0c93bc010d1e3abbed28690fe0dfffb2"       // <--- YOUR CHECKSUM
+        )
+    ]
+)
